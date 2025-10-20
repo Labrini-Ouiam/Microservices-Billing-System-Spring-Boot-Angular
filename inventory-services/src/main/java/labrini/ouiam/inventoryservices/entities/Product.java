@@ -1,0 +1,20 @@
+package labrini.ouiam.inventoryservices.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.*;
+
+@Entity
+@NoArgsConstructor @AllArgsConstructor @Getter @Setter @ToString
+@Data
+@Builder
+public class Product {
+    @Id
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String id;
+    private String name;
+    private double price;
+    private int quantity;
+}
