@@ -1,13 +1,17 @@
 package labrini.ouiam.customerservice;
 
+import labrini.ouiam.customerservice.config.CustomerConfigParams;
 import labrini.ouiam.customerservice.entities.Customer;
 import labrini.ouiam.customerservice.repository.CustomerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
+//pour activer la configuration properties
+@EnableConfigurationProperties(CustomerConfigParams.class)
 public class CustomerServiceApplication {
 
 	public static void main(String[] args) {
